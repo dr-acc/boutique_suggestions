@@ -1,5 +1,5 @@
 defmodule BoutiqueSuggestions do
   def get_combinations(tops, bottoms) do
-    for top <- tops, bottom <- bottoms, do: {top, bottom}
+    for top <- tops, bottom <- bottoms, top.base_color != bottom.base_color, do: {top, bottom}
   end
 end
